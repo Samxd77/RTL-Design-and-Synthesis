@@ -3,7 +3,7 @@
 ## Contents
 - [Understanding Simulator, Design, and Testbench](#1-Understanding-Simulator-Design-and-Testbench)
 - [How to work with iverilog and GTK wave](#2-How-to-work-with-iverilog-and-GTK-wave)
-- Practical: Simulating a 2:1 Multiplexer (good MUX) 
+- [Practical: Simulating a 2:1 Multiplexer (good MUX)](#3-practical-simulating-a-21-multiplexer-good-mux)
 - Understanding the Verilog Code  
 - Overview of Yosys and Standard Cell Libraries  
 - Practical Synthesis Flow using Yosys  
@@ -188,4 +188,51 @@ gtkwave dump.vcd &
 
 ---
 
-**Next:** [Practical: Simulating a 2:1 Multiplexer](#practical-simulating-a-21-multiplexer-good-mux)
+## 3. Practical: Simulating a 2:1 Multiplexer (good MUX)
+
+### Simulation Setup
+
+**Compile the design and testbench:**
+```bash
+iverilog -o a.out mux_2to1.v mux_2to1_tb.v
+```
+
+**Run the simulation:**
+```bash
+./a.out
+```
+
+This generates `dump.vcd` containing all signal transitions.
+
+### Viewing Output in GTKwave
+
+**Launch GTKwave:**
+```bash
+gtkwave dump.vcd &
+```
+
+**Observing the Results:**
+
+1. **Expand the module hierarchy** - Click on `mux_2to1_tb` to view signals
+2. **Select signals to observe:**
+   - `i_0` - First input (0 or 1)
+   - `i_1` - Second input (0 or 1)
+   - `sel` - Select line (control signal)
+   - `y` - Output (multiplexed result)
+
+3. **Verify MUX behavior in the waveform:**
+   - When `sel = 0`: `y` follows `i_0`
+   - When `sel = 1`: `y` follows `i_1`
+
+4. **Use GTKwave tools:**
+   - **Zoom in** on specific transitions to see timing details
+   - **Mark time** at signal changes to verify synchronization
+   - **Change display format** (right-click) to Binary for clearer bit viewing
+
+### Expected Output
+
+The waveform should show the MUX correctly selecting between two inputs based on the select signal with zero propagation delay in an ideal simulation environment.
+
+---
+
+**Next:** Understanding the Verilog Code
