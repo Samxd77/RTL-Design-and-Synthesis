@@ -213,6 +213,9 @@ gtkwave dump.vcd &
 
 **Observing the Results:**
 
+<img width="992" height="633" alt="image" src="https://github.com/user-attachments/assets/1d9dde47-d5a1-4203-9b57-212290feccf6" />
+
+
 1. **Expand the module hierarchy** - Click on `mux_2to1_tb` to view signals
 2. **Select signals to observe:**
    - `i_0` - First input (0 or 1)
