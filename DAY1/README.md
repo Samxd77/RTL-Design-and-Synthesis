@@ -4,7 +4,7 @@
 - [Understanding Simulator, Design, and Testbench](#1-Understanding-Simulator-Design-and-Testbench)
 - [How to work with iverilog and GTK wave](#2-How-to-work-with-iverilog-and-GTK-wave)
 - [Practical: Simulating a 2:1 Multiplexer (good MUX)](#3-practical-simulating-a-21-multiplexer-good-mux)
-- Understanding the Verilog Code  
+- [Understanding the Verilog Code](#4-Understanding-the-Verilog-Code)
 - Overview of Yosys and Standard Cell Libraries  
 - Practical Synthesis Flow using Yosys  
 - Key Takeaways  
@@ -222,7 +222,7 @@ The waveform should show the MUX correctly selecting between two inputs based on
 
 ---
 
-**Next:** Understanding the Verilog Code
+## 4. Understanding the Verilog Code
 
 
 
@@ -233,5 +233,11 @@ The waveform should show the MUX correctly selecting between two inputs based on
 
 
 <img width="704" height="203" alt="image" src="https://github.com/user-attachments/assets/523cb9c2-2c32-48b1-b47b-fd514c5feefd" />
+
+###  **How It Works**
+
+- **Inputs:** `i0`, `i1` (data), `sel` (select line)
+- **Output:** `y` (registered output)
+- **Logic:** If `sel` is 1, `y` gets `i1`; if `sel` is 0, `y` gets `i0`.
 
 
