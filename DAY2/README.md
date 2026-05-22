@@ -40,6 +40,11 @@ These parameters define the environment for cell characterization.
 
 ---
 
+<img width="835" height="637" alt="image" src="https://github.com/user-attachments/assets/b9b36762-8a91-491a-951e-65fca7324bf5" />
+
+
+<img width="1267" height="710" alt="image" src="https://github.com/user-attachments/assets/5288bbe6-2d7c-4f28-ad95-2fb78890927e" />
+
 ## Cell Drive Strength Comparison
 
 Standard cells are available in multiple variants.
@@ -73,6 +78,8 @@ Limitation:
 
 ---
 
+<img width="609" height="254" alt="image" src="https://github.com/user-attachments/assets/ba2baea4-cbe1-433d-b438-699db49ccb4b" />
+
 ### Flat Synthesis
 
 Hierarchy is removed and converted into one unified structure.
@@ -94,7 +101,7 @@ flatten
 ```
 
 ---
-
+<img width="790" height="118" alt="image" src="https://github.com/user-attachments/assets/39457d1c-0af5-4688-9620-bf9545fd23d3" />
 
 ### Key Differences
 
