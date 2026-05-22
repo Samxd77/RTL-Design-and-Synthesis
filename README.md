@@ -60,7 +60,7 @@ The repository is divided into daily modules:
 RTL basics and synthesis introduction
 
 ### Day 2
-Timing libraries and flip-flop implementation
+Library Analysis, Synthesis Styles and Sequential Design
 
 ### Day 3
 Optimization of combinational and sequential logic
