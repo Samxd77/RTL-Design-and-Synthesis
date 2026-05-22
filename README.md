@@ -1,6 +1,8 @@
 # RTL Design & Synthesis using SKY130 Workshop 
-**Workshop Managed by** VSDIAT Community
-**Created By:** Samarth Satwar  
+
+> **Workshop Managed by** VSDIAT Community
+> **Author:** Samarth Satwar
+> **Workshop Reference:** [VSD Sky130 RTL Design and Synthesis Workshop](https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop)
 
 ---
 
