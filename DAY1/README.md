@@ -223,3 +223,15 @@ The waveform should show the MUX correctly selecting between two inputs based on
 ---
 
 **Next:** Understanding the Verilog Code
+
+
+
+
+
+<img width="548" height="495" alt="image" src="https://github.com/user-attachments/assets/927404b4-15ca-46c6-a005-570b0d681d26" />
+
+
+
+<img width="704" height="203" alt="image" src="https://github.com/user-attachments/assets/523cb9c2-2c32-48b1-b47b-fd514c5feefd" />
+
+
