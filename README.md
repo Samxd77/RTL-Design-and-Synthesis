@@ -52,7 +52,7 @@ Required tools:
 - Text editor (VS Code / gedit)
 ---
 
-# 🧭 Complete RTL Design Flow
+#   RTL Design Flow
 
 ```text
 Specification
