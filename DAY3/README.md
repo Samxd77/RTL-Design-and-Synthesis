@@ -6,6 +6,7 @@
 - [2. Combinational Logic Optimization](#2-Combinational-Logic-Optimization)
 - [3. Sequential Logic Optimization](#3-Sequential-Logic-Optimization)
 - [4. Labs on Optimization](#4-labs-on-optimization)
+- [5. Summary](#5-Summary)
   
 
 ---
@@ -239,3 +240,15 @@ endmodule
   <img width="577" height="628" alt="image" src="https://github.com/user-attachments/assets/2c448f08-3136-4b35-af50-7024f8546f82" />
 
 ---
+## 5. Summary
+
+Day 3 provided practical understanding of combinational and sequential optimizations in RTL synthesis.
+
+By analyzing:
+
+* RTL code
+* simulations
+* synthesized netlists
+* optimized gate-level implementations
+
+I learned how synthesis tools transform high-level Verilog designs into efficient SKY130 standard-cell hardware using constant propagation, Boolean simplification, dead logic elimination, and sequential optimization techniques.
