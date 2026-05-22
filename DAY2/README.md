@@ -2,17 +2,17 @@
 
 
 ## Contents
-- [Understanding Timing Libraries](#1-Understanding-Timing-Libraries)
-- [Synthesis Approaches](#-Synthesis-Approaches)
-- [Flip-Flops](#-Flip-Flops)
-- [Synthesis through Yosys](#-Synthesis-through-Yosys)
-- [Summary](#-Summary)
+- [Understanding Timing Libraries](#1-understanding-timing-libraries)
+- [Synthesis Approaches](#synthesis-approaches)
+- [Flip-Flops](#flip-flops)
+- [Synthesis through Yosys](#synthesis-through-yosys)
+- [Summary](#summary)
 
 
 ---
 
 
-##1. Understanding Timing Libraries
+## 1. Understanding Timing Libraries
 
 The `.lib` file contains information required by synthesis tools to make implementation decisions.
 
@@ -27,7 +27,7 @@ Key data available inside libraries:
 
 ### SKY130 PDK 
 
-The SKY130 PDK is an open-source Process Design Kit based on SkyWater Technology's 130nm CMOS technology. It provides essential models and libraries for integrated circuit (IC) design, including timing, power, and process variation information.
+The SKY130 PDK is an open-source Process Design Kit based on SkyWater Technology's 130nm CMOS technology. It provides essential models and libraries for integrated circuit (IC) design, including timing information.
 
 
 ### SKY130 Naming Convention
@@ -138,12 +138,11 @@ Reasons:
 
 ---
 
- ## Flip-Flops
+## Flip-Flops
  
-## Why Flip-Flops are Needed
+### Why Flip-Flops are Needed
 
-Long combinational chains create unstable outputs due to glitches. Flip-flops are fundamental sequential elements in digital design, used to store binary data. Below are efficient coding styles for different reset/set behaviors.
-
+Long combinational chains create unstable outputs due to glitches. Flip-flops are fundamental sequential elements in digital design, used to store binary data. Below are efficient coding styles for different reset/set types.
 
 Flip-flops:
 
@@ -170,7 +169,7 @@ These may be:
 - DFF with asynchronous set
 - DFF with synchronous reset
 
-  ### Synchronous Reset D Flip-Flop
+### Synchronous Reset D Flip-Flop
 
 ```verilog
 module dff_syncres (input clk, input async_reset, input sync_reset, input d, output reg q);
@@ -183,7 +182,7 @@ endmodule
 ```
 - **Synchronous reset**: Takes effect only on the clock edge.
 
-  ### Asynchronous Set D Flip-Flop
+### Asynchronous Set D Flip-Flop
 
 ```verilog
 module dff_async_set (input clk, input async_set, input d, output reg q);
@@ -248,7 +247,7 @@ In some cases, additional logic such as inverters may be inserted when reset pol
    ```
 2. Read Liberty library:
    ```shell
-   read_liberty -lib ..lib/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+   read_liberty -lib ../lib/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
    ```
 3. Read Verilog code:
    ```shell
@@ -260,11 +259,11 @@ In some cases, additional logic such as inverters may be inserted when reset pol
    ```
 5. Map flip-flops:
    ```shell
-   dfflibmap -liberty lib/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+   dfflibmap -liberty ../lib/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
    ```
 6. Technology mapping:
    ```shell
-   abc -liberty ..lib/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+   abc -liberty ../lib/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
    ```
 7. Visualize the gate-level netlist:
    ```shell
