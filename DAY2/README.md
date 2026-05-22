@@ -1,13 +1,15 @@
 # Day 2: Library Analysis, Synthesis Styles and Sequential Design
 
-## Content
----
--[Understanding Timing Libraries](#-Understanding-Timing-Libraries)
--[Synthesis Approaches](#-Synthesis-Approaches)
--[Flip-Flops](#-Flip-Flops)
--[Synthesis through Yosys](#-Synthesis-through-Yosys)
--[Summary](#-Summary)
 
+## Contents
+- [Understanding Timing Libraries](#-Understanding-Timing-Libraries)
+- [Synthesis Approaches](#-Synthesis-Approaches)
+- [Flip-Flops](#-Flip-Flops)
+- [Synthesis through Yosys](#-Synthesis-through-Yosys)
+- [Summary](#-Summary)
+
+
+---
 
 
 ## Understanding Timing Libraries
