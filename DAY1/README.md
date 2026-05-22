@@ -6,8 +6,7 @@
 - [Practical: Simulating a 2:1 Multiplexer (good MUX)](#3-practical-simulating-a-21-multiplexer-good-mux)
 - [Understanding the Verilog Code](#4-Understanding-the-Verilog-Code)
 - [Introduction to Yosys and Logic Synthesis](#5-Introduction-to-Yosys-and-Logic-Synthesis)
-- Practical Synthesis Flow using Yosys  
-- Key Takeaways  
+- [Summary]  
 
 ---
 
@@ -253,13 +252,7 @@ The waveform should show the MUX correctly selecting between two inputs based on
 
   ## Why Different Gate Variants Exist?
 
-A `.lib` file contains multiple versions of gates with different characteristics:
 
-- **Speed:** Fast or slower implementations
-- **Power:** Low-power alternatives
-- **Area:** Compact cells for smaller layouts
-- **Drive Strength:** Ability to handle larger loads
-- **Signal Reliability:** Improved performance/noise handling
 
 Synthesis tools automatically choose the most suitable cells based on design requirements.
 
@@ -269,6 +262,20 @@ Synthesis tools automatically choose the most suitable cells based on design req
 
 <img width="867" height="485" alt="image" src="https://github.com/user-attachments/assets/74d72222-b648-40aa-8d7e-57333498c3da" />
 
-   ### Logic Design
+   ### Logic Synthesis
+
+ <img width="642" height="484" alt="image" src="https://github.com/user-attachments/assets/afae5b2e-fa67-45af-9873-fa1705fc817f" />
+
+
+   A `.lib` file contains multiple versions of gates with different characteristics:
+
+- **Speed:** Fast or slower implementations
+- **Power:** Low-power alternatives
+- **Area:** Compact cells for smaller layouts
+- **Drive Strength:** Ability to handle larger loads
+- **Signal Reliability:** Improved performance/noise handling
+
+<img width="648" height="480" alt="image" src="https://github.com/user-attachments/assets/9ccb96dc-5220-4a95-98d5-c826c5b1ffe1" />
+
 
 
