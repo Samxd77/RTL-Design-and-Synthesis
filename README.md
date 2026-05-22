@@ -66,7 +66,7 @@ Timing libraries and flip-flop implementation
 Optimization of combinational and sequential logic
 
 ### Day 4
-GLS flow and simulation mismatch concepts
+Gate-Level Simulation (GLS), Blocking vs. Non-Blocking in Verilog, and Synthesis-Simulation Mismatch
 
 ### Day 5
 RTL Optimization and Synthesis Concepts
