@@ -69,7 +69,7 @@ Optimization of combinational and sequential logic
 GLS flow and simulation mismatch concepts
 
 ### Day 5
-Advanced synthesis optimization techniques
+RTL Optimization and Synthesis Concepts
 
 ---
 
