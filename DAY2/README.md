@@ -112,7 +112,9 @@ flatten
 | Runtime               | Faster for large designs           | Slower for large designs     |
 | Debugging             | Easier (traces to RTL)             | Harder                       |
 
+<img width="1458" height="902" alt="image" src="https://github.com/user-attachments/assets/00c85761-558e-4467-8247-8062269a66d3" />
 
+  Hierarchical Synthesis vs Flattened Synthesis
 
 ## Module-Level Synthesis
 
@@ -186,6 +188,20 @@ endmodule
 ```
 - **Asynchronous set**: Overrides clock, setting q to 1 immediately.
 
+### Asynchronous Reset D Flip-Flop
+
+```verilog
+module dff_asyncres (input clk, input async_reset, input d, output reg q);
+  always @ (posedge clk, posedge async_reset)
+    if (async_reset)
+      q <= 1'b0;
+    else
+      q <= d;
+endmodule
+```
+- **Asynchronous reset**: Overrides clock, setting q to 0 immediately.
+- **Edge-triggered**: Captures d on rising clock edge if reset is low.
+
 
 Simulation performed using:
 
@@ -210,6 +226,46 @@ The synthesis tool maps RTL flip-flops to equivalent standard-cell versions.
 In some cases, additional logic such as inverters may be inserted when reset polarities differ.
 
 ---
+## Waveforms 
+<img width="1535" height="787" alt="image" src="https://github.com/user-attachments/assets/21f956a8-a355-4bbd-bdfe-08843d5e47cb" />
+<img width="1600" height="718" alt="image" src="https://github.com/user-attachments/assets/150e8a04-a9f3-4434-befa-7fc6afbfbac9" />
+<img width="1600" height="715" alt="image" src="https://github.com/user-attachments/assets/fa8bab13-54aa-4995-b832-e5db830bbe46" />
+
+## Synthesis through Yosys
+
+
+<img width="1011" height="305" alt="image" src="https://github.com/user-attachments/assets/240340d7-6918-4f4a-ad36-28708f4beee8" />
+<img width="851" height="227" alt="image" src="https://github.com/user-attachments/assets/d464d7a1-27fb-4fe8-bb1a-d5d7bdd79284" />
+<img width="892" height="237" alt="image" src="https://github.com/user-attachments/assets/94225f3f-d901-4b53-850e-b6d9615ebab0" />
+
+1. Start Yosys:
+   ```shell
+   yosys
+   ```
+2. Read Liberty library:
+   ```shell
+   read_liberty -lib ..lib/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+   ```
+3. Read Verilog code:
+   ```shell
+   read_verilog lib/dff_syncres.v
+   ```
+4. Synthesize:
+   ```shell
+   synth -top dff_syncres
+   ```
+5. Map flip-flops:
+   ```shell
+   dfflibmap -liberty lib/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+   ```
+6. Technology mapping:
+   ```shell
+   abc -liberty ..lib/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+   ```
+7. Visualize the gate-level netlist:
+   ```shell
+   show
+   ```
 
 ## Synthesis Optimization Examples
 
