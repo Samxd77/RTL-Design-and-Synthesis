@@ -278,40 +278,69 @@ write_verilog netlist.v
 
 ---
 
-# 10. Gate Level Simulation
 
-Compile:
+# 10. Gate-Level Simulation (GLS)
 
-```bash
+GLS verifies synthesized hardware behavior.
+
+Unlike RTL simulation:
+
+* GLS uses synthesized netlist
+* includes standard cell timing behavior
+* validates synthesis correctness
+
+---
+
+# GLS Compilation
+
+```bash id="9z5oxw"
 iverilog \
-primitives.v \
-sky130.v \
-netlist.v \
-tb.v
+../my_lib/verilog_model/primitives.v \
+../my_lib/verilog_model/sky130_fd_sc_hd.v \
+design_netlist.v \
+tb_design.v
 ```
 
-Run:
+---
 
-```bash
+# Run GLS
+
+```bash id="99oyjlwm"
 ./a.out
 ```
 
-Purpose:
-- Verify synthesized hardware
-- Detect mismatches
+---
+
+# Open Waveform
+
+```bash id="6n1n8q"
+gtkwave tb_design.vcd
+```
 
 ---
 
 # RTL vs GLS
 
-| RTL | GLS |
-|------|------|
-| Behavioral | Gate-Level |
-| Faster | Realistic |
-| RTL code | Netlist |
+| RTL Simulation          | GLS                         |
+| ----------------------- | --------------------------- |
+| Behavioral              | Gate-level                  |
+| Faster                  | More realistic              |
+| Uses RTL                | Uses synthesized netlist    |
+| No standard cells       | Uses SKY130 standard cells  |
+| Functional verification | Post-synthesis verification |
 
 ---
 
+# Important GLS Learning
+
+GLS helps identify:
+
+* synthesis mismatches
+* latch inference
+* incorrect hardware mapping
+* post-synthesis behavior differences
+
+---
 # 11. Ripple Carry Adder using Generate
 
 ### Ripple Carry Adder using Generate
