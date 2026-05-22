@@ -1,7 +1,6 @@
-# RTL Design & Synthesis using SKY130
-
+# RTL Design & Synthesis using SKY130 Workshop 
+**Workshop Managed by** VSDIAT Community
 **Created By:** Samarth Satwar  
-**Reference:** VSD RTL Design and Synthesis using SKY130 Workshop  
 
 ---
 
@@ -49,6 +48,29 @@ Required tools:
 - Yosys
 - SKY130 PDK
 - Text editor (VS Code / gedit)
+---
+
+# 🧭 Complete RTL Design Flow
+
+```text
+Specification
+      ↓
+RTL Design (Verilog)
+      ↓
+RTL Simulation using Icarus Verilog
+      ↓
+Waveform Verification using GTKWave
+      ↓
+Logic Synthesis using Yosys
+      ↓
+Technology Mapping using SKY130
+      ↓
+Gate-Level Netlist Generation
+      ↓
+Gate-Level Simulation (GLS)
+      ↓
+Optimization & Verification
+```
 
 ---
 
@@ -75,7 +97,7 @@ RTL Optimization and Synthesis Concepts
 
 # Acknowledgement
 
-Special thanks to the VSD community and open-source EDA ecosystem for making practical VLSI learning accessible.
+Special thanks to the VSD community , Kunal Ghosh sir and open-source EDA ecosystem for making practical VLSI learning accessible.
 
 Tools and resources used:
 
