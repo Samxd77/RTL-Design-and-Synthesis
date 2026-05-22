@@ -264,6 +264,20 @@ Synthesis tools automatically choose the most suitable cells based on design req
 
    ### Logic Synthesis
 
+
+# Synthesis Process
+
+Synthesis converts **RTL (Verilog code)** into a **gate-level netlist** using library cells.
+
+Flow:
+RTL → Synthesis Tool → Netlist
+
+- Converts HDL into logic gates
+- Creates gate interconnections
+- Produces a final netlist file
+- Used for FPGA/ASIC implementation
+
+
  <img width="642" height="484" alt="image" src="https://github.com/user-attachments/assets/afae5b2e-fa67-45af-9873-fa1705fc817f" />
 
 
@@ -276,6 +290,22 @@ Synthesis tools automatically choose the most suitable cells based on design req
 - **Signal Reliability:** Improved performance/noise handling
 
 <img width="648" height="480" alt="image" src="https://github.com/user-attachments/assets/9ccb96dc-5220-4a95-98d5-c826c5b1ffe1" />
+
+# Why Different Gate Flavours Exist?
+
+Circuit speed depends on **combinational path delay**.
+
+Clock relation:
+
+Tclk > Tc-q + Tcomb + Tsetup
+
+Key points:
+- Smaller **Tcomb** → higher operating speed
+- Faster cells reduce delay
+- Libraries provide multiple gate variants
+- Tool selects suitable cells based on timing, power and area constraints
+
+<img width="647" height="483" alt="image" src="https://github.com/user-attachments/assets/d9090e6e-39e7-4db9-86cd-2198ef1e726c" />
 
 
 
