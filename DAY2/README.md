@@ -2,7 +2,7 @@
 
 
 ## Contents
-- [Understanding Timing Libraries](#-Understanding-Timing-Libraries)
+- [Understanding Timing Libraries](#1-Understanding-Timing-Libraries)
 - [Synthesis Approaches](#-Synthesis-Approaches)
 - [Flip-Flops](#-Flip-Flops)
 - [Synthesis through Yosys](#-Synthesis-through-Yosys)
@@ -12,7 +12,7 @@
 ---
 
 
-## Understanding Timing Libraries
+##1. Understanding Timing Libraries
 
 The `.lib` file contains information required by synthesis tools to make implementation decisions.
 
