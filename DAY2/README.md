@@ -5,6 +5,13 @@
 This session explored timing libraries, synthesis strategies, flip-flop implementation, and optimization behavior during RTL synthesis.
 
 ---
+[## Understanding Timing Libraries](##-Understanding-Timing-Libraries)
+[## Synthesis Approaches](##-Synthesis-Approaches)
+[## Flip-Flops](##-Flip-Flops)
+[## Synthesis through Yosys](##-Synthesis-through-Yosys)
+[## Summary](##-Summary)
+
+
 
 ## Understanding Timing Libraries
 
@@ -132,6 +139,8 @@ Reasons:
 
 ---
 
+ ## Flip-Flops
+ 
 ## Why Flip-Flops are Needed
 
 Long combinational chains create unstable outputs due to glitches. Flip-flops are fundamental sequential elements in digital design, used to store binary data. Below are efficient coding styles for different reset/set behaviors.
@@ -226,10 +235,6 @@ The synthesis tool maps RTL flip-flops to equivalent standard-cell versions.
 In some cases, additional logic such as inverters may be inserted when reset polarities differ.
 
 ---
-## Waveforms 
-<img width="1535" height="787" alt="image" src="https://github.com/user-attachments/assets/21f956a8-a355-4bbd-bdfe-08843d5e47cb" />
-<img width="1600" height="718" alt="image" src="https://github.com/user-attachments/assets/150e8a04-a9f3-4434-befa-7fc6afbfbac9" />
-<img width="1600" height="715" alt="image" src="https://github.com/user-attachments/assets/fa8bab13-54aa-4995-b832-e5db830bbe46" />
 
 ## Synthesis through Yosys
 
