@@ -5,7 +5,7 @@
 - [How to work with iverilog and GTK wave](#2-How-to-work-with-iverilog-and-GTK-wave)
 - [Practical: Simulating a 2:1 Multiplexer (good MUX)](#3-practical-simulating-a-21-multiplexer-good-mux)
 - [Understanding the Verilog Code](#4-Understanding-the-Verilog-Code)
-- Overview of Yosys and Standard Cell Libraries  
+- [Introduction to Yosys and Logic Synthesis](#5-Introduction-to-Yosys-and-Logic-Synthesis)
 - Practical Synthesis Flow using Yosys  
 - Key Takeaways  
 
@@ -239,5 +239,36 @@ The waveform should show the MUX correctly selecting between two inputs based on
 - **Inputs:** `i0`, `i1` (data), `sel` (select line)
 - **Output:** `y` (registered output)
 - **Logic:** If `sel` is 1, `y` gets `i1`; if `sel` is 0, `y` gets `i0`.
+
+## 5. Introduction to Yosys and Logic Synthesis
+
+**Yosys** is an open-source synthesis framework used in digital design. It transforms Verilog HDL into a gate-level representation that can later be implemented on FPGA or ASIC platforms.
+
+#### Features of Yosys
+- **Synthesis:** Converts HDL to a logic circuit
+- **Optimization:** Improves speed or area
+- **Technology Mapping:** Matches logic to actual hardware cells
+- **Verification:** Checks correctness
+- **Extensibility:** Supports custom flows
+
+  ## Why Different Gate Variants Exist?
+
+A `.lib` file contains multiple versions of gates with different characteristics:
+
+- **Speed:** Fast or slower implementations
+- **Power:** Low-power alternatives
+- **Area:** Compact cells for smaller layouts
+- **Drive Strength:** Ability to handle larger loads
+- **Signal Reliability:** Improved performance/noise handling
+
+Synthesis tools automatically choose the most suitable cells based on design requirements.
+
+<img width="866" height="493" alt="image" src="https://github.com/user-attachments/assets/0946c239-4954-42d9-9b30-d8ea98060120" />
+
+
+
+<img width="867" height="485" alt="image" src="https://github.com/user-attachments/assets/74d72222-b648-40aa-8d7e-57333498c3da" />
+
+   ### Logic Design
 
 
