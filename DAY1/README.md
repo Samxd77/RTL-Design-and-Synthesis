@@ -6,7 +6,7 @@
 - [Practical: Simulating a 2:1 Multiplexer (good MUX)](#3-practical-simulating-a-21-multiplexer-good-mux)
 - [Understanding the Verilog Code](#4-Understanding-the-Verilog-Code)
 - [Introduction to Yosys and Logic Synthesis](#5-Introduction-to-Yosys-and-Logic-Synthesis)
-- [Summary]  
+- [Summary](#6-Summary)
 
 ---
 
@@ -306,6 +306,65 @@ Key points:
 - Tool selects suitable cells based on timing, power and area constraints
 
 <img width="647" height="483" alt="image" src="https://github.com/user-attachments/assets/d9090e6e-39e7-4db9-86cd-2198ef1e726c" />
+
+
+`good_mux` design using Yosys!
+
+###  Yosys Flow
+
+**Start Yosys**
+    ```shell
+    yosys
+    ```
+
+**Read the liberty library**
+    ```shell
+    read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+    ```
+
+**Read the Verilog code**
+    ```shell
+    read_verilog good_mux.v
+    ```
+
+**Synthesize the design**
+    ```shell
+    synth -top good_mux
+    ```
+
+**Technology mapping**
+    ```shell
+    abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+    ```
+
+**Visualize the gate-level netlist**
+    ```shell
+    show
+    ```
+<img width="607" height="331" alt="image" src="https://github.com/user-attachments/assets/93dabe71-4218-462f-b968-fcc1310d1f93" />
+
+
+## 6. Summary
+
+# Day 1 Summary
+
+Day 1 covered the complete RTL-to-gate-level design flow using open-source VLSI tools.
+
+## Topics Learned
+- RTL design and testbench basics
+- Simulation using Iverilog
+- Waveform analysis with GTKWave
+- Fundamentals of logic synthesis
+- Standard cell library concepts
+- Setup and hold timing
+- Fast vs slow standard cells
+- Synthesis using Yosys
+- Technology mapping with Sky130 libraries
+- Gate-level netlist generation
+- Post-synthesis verification
+
+This session built the foundation for understanding how Verilog RTL is transformed into real digital hardware.
+
 
 
 
