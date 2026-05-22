@@ -308,39 +308,38 @@ Key points:
 <img width="647" height="483" alt="image" src="https://github.com/user-attachments/assets/d9090e6e-39e7-4db9-86cd-2198ef1e726c" />
 
 
-`good_mux` design using Yosys!
+###  Step-by-Step Yosys Flow
 
-###  Yosys Flow
-
-**Start Yosys**
+1. **Start Yosys**
     ```shell
     yosys
     ```
 
-**Read the liberty library**
+2. **Read the liberty library**
     ```shell
     read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
     ```
 
-**Read the Verilog code**
+3. **Read the Verilog code**
     ```shell
     read_verilog good_mux.v
     ```
 
-**Synthesize the design**
+4. **Synthesize the design**
     ```shell
     synth -top good_mux
     ```
 
-**Technology mapping**
+5. **Technology mapping**
     ```shell
     abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
     ```
 
-**Visualize the gate-level netlist**
+6. **Visualize the gate-level netlist**
     ```shell
     show
     ```
+    
 <img width="607" height="331" alt="image" src="https://github.com/user-attachments/assets/93dabe71-4218-462f-b968-fcc1310d1f93" />
 
 
