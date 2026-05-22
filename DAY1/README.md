@@ -114,6 +114,7 @@ Open the generated VCD file with GTKwave:
 ```bash
 gtkwave dump.vcd &
 ```
+  <img width="1304" height="681" alt="image" src="https://github.com/user-attachments/assets/5923c12d-9f53-43e3-8f41-aec195593790" />
 
 **The `&` at the end runs GTKwave in the background, allowing you to continue using the terminal.**
 
