@@ -167,24 +167,7 @@ iverilog -o a.out mux_2to1.v mux_2to1_tb.v
 gtkwave dump.vcd &
 ```
 
-### Troubleshooting Common Issues
 
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| **Command not found: iverilog** | iverilog not installed | Install using package manager (apt, brew) |
-| **Syntax errors during compilation** | Verilog code has errors | Check code for typos, missing semicolons, etc. |
-| **No VCD file generated** | Testbench doesn't dump signals | Add `$dumpvars;` in testbench `initial` block |
-| **Empty waveform in GTKwave** | No signals selected | Select signals from hierarchy panel in GTKwave |
-| **GTKwave crashes** | Large VCD file | Try filtering specific signals or zooming out |
-
-### Tips for Effective Simulation
-
-1. **Initialize all signals** - Set default values in testbench to avoid undefined behavior
-2. **Use meaningful names** - Name signals and modules clearly for easy identification
-3. **Add comments** - Document test cases and expected behavior in testbench
-4. **Incremental testing** - Test small blocks before testing entire design
-5. **Check timing** - Use GTKwave markers to verify setup/hold times and propagation delays
-6. **Save waveforms** - GTKwave allows saving signal configurations for later analysis
 
 ---
 
