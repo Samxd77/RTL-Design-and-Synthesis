@@ -57,7 +57,7 @@ Required tools:
 The repository is divided into daily modules:
 
 ### Day 1
-RTL basics and synthesis introduction
+Introduction to Verilog RTL Design and Synthesis
 
 ### Day 2
 Library Analysis, Synthesis Styles and Sequential Design
